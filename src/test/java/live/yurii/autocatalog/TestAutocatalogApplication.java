@@ -1,4 +1,4 @@
-package yurii.live.autocatalog;
+package live.yurii.autocatalog;
 
 import org.springframework.boot.SpringApplication;
 

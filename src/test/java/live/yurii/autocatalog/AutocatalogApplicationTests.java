@@ -1,4 +1,4 @@
-package yurii.live.autocatalog;
+package live.yurii.autocatalog;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

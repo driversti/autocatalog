@@ -8,7 +8,7 @@
     <version>3.5.6</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
-  <groupId>yurii.live</groupId>
+  <groupId>live.yurii</groupId>
   <artifactId>autocatalog</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>autocatalog</name>
