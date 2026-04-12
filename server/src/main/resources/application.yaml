@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: autocatalog
+  docker:
+    compose:
+      file: ../compose.yaml

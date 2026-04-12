@@ -6,9 +6,21 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 AutoCatalog — automotive encyclopedia REST API (makes, models, generations, engines, transmissions). Java 25, Spring Boot 4, PostgreSQL, Flyway, SpringDoc OpenAPI.
 
+## Project layout
+
+```
+server/     Java backend (Spring Boot, Maven)
+web/        Frontend (placeholder)
+compose.yaml   shared Docker Compose (Postgres)
+db/         mounted Postgres data (gitignored)
+```
+
 ## Commands
 
+All Maven commands must be run from `server/`:
+
 ```bash
+cd server
 ./mvnw spring-boot:run                 # run app (Flyway migrates on startup; devtools + docker-compose auto-starts Postgres via compose.yaml)
 ./mvnw test                            # full test suite: domain unit, controller slice, JPA adapter, e2e with Testcontainers
 ./mvnw test -Dtest=EngineTest          # single test class
@@ -19,7 +31,7 @@ AutoCatalog — automotive encyclopedia REST API (makes, models, generations, en
 
 Swagger UI: http://localhost:8080/swagger-ui.html
 
-The app uses `spring-boot-docker-compose` — running `./mvnw spring-boot:run` will auto-start the Postgres service defined in `compose.yaml` (db name `ac`, user `acuser`). The `db/` directory holds mounted Postgres data and should not be committed.
+The app uses `spring-boot-docker-compose` — running `./mvnw spring-boot:run` will auto-start the Postgres service defined in `compose.yaml` at the project root (configured via `spring.docker.compose.file=../compose.yaml`). The `db/` directory holds mounted Postgres data and should not be committed.
 
 ## Architecture — DDD + Ports & Adapters
 
@@ -106,17 +118,17 @@ After Body/Variant introduction, Generation holds ONLY:
 
 ## Database migrations
 
-Flyway migrations in `src/main/resources/db/migration/` are append-only and versioned `V{n}__description.sql`. When changing a schema, add a new `V{n}` — do not edit existing migrations. Pair schema changes with backfills in a follow-up migration when needed (see `V8__engine_system_power_and_rename_5afe.sql` + `V9__backfill_hybrid_system_power.sql` for the pattern).
+Flyway migrations in `server/src/main/resources/db/migration/` are append-only and versioned `V{n}__description.sql`. When changing a schema, add a new `V{n}` — do not edit existing migrations. Pair schema changes with backfills in a follow-up migration when needed (see `V8__engine_system_power_and_rename_5afe.sql` + `V9__backfill_hybrid_system_power.sql` for the pattern).
 
 ## Testing layout
 
-Tests under `src/test/java/live/yurii/autocatalog/` mirror the main-source structure:
+Tests under `server/src/test/java/live/yurii/autocatalog/` mirror the main-source structure:
 - `domain/` — pure unit tests, no Spring context.
 - `api/` — controller slice tests (`@WebMvcTest`).
 - `infrastructure/` — JPA adapter tests (`@DataJpaTest`) against Testcontainers Postgres.
 - `e2e/` — full Spring Boot tests with Testcontainers Postgres (`TestcontainersConfiguration.java`, `TestAutocatalogApplication.java`).
 
-Always run `./mvnw test` after changes.
+Always run `cd server && ./mvnw test` after changes.
 
 ## Rules
 

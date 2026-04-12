@@ -17,7 +17,11 @@ live.yurii.autocatalog.api/             — REST controllers, DTOs
 ```
 
 ## Commands
+
+All Maven commands must be run from `server/`:
+
 ```bash
+cd server
 ./mvnw spring-boot:run     # start app
 ./mvnw test                # run tests
 ./mvnw flyway:migrate      # run DB migrations
