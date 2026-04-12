@@ -2,6 +2,8 @@ package live.yurii.autocatalog.infrastructure.config;
 
 import live.yurii.autocatalog.application.body.BodyService;
 import live.yurii.autocatalog.application.engine.EngineService;
+import live.yurii.autocatalog.infrastructure.image.ImageSourceService;
+import live.yurii.autocatalog.infrastructure.persistence.image.ImageSourceJpaRepository;
 import live.yurii.autocatalog.application.generation.GenerationService;
 import live.yurii.autocatalog.application.make.MakeService;
 import live.yurii.autocatalog.application.model.CarModelService;
@@ -59,5 +61,10 @@ public class ApplicationConfig {
                                        EngineRepository engineRepository,
                                        TransmissionRepository transmissionRepository) {
     return new VariantService(variantRepository, bodyRepository, engineRepository, transmissionRepository);
+  }
+
+  @Bean
+  public ImageSourceService imageSourceService(ImageSourceJpaRepository imageSourceJpaRepository) {
+    return new ImageSourceService(imageSourceJpaRepository);
   }
 }
