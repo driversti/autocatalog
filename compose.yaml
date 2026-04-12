@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: 'postgres:18.3'
+    container_name: 'ac-db'
+    environment:
+      - 'POSTGRES_DB=ac'
+      - 'POSTGRES_PASSWORD=acsecret'
+      - 'POSTGRES_USER=acuser'
+    ports:
+      - '5432'
+    volumes:
+      - './db:/var/lib/postgresql'
+
