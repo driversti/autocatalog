@@ -2,7 +2,7 @@ package live.yurii.autocatalog.api.make;
 
 import live.yurii.autocatalog.api.shared.GlobalExceptionHandler;
 import live.yurii.autocatalog.application.make.MakeService;
-import live.yurii.autocatalog.application.shared.EntityNotFoundException;
+import live.yurii.autocatalog.domain.shared.EntityNotFoundException;
 import live.yurii.autocatalog.domain.make.Make;
 import live.yurii.autocatalog.domain.make.MakeId;
 import org.junit.jupiter.api.Test;

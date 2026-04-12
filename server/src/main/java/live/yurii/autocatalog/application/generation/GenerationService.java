@@ -1,6 +1,6 @@
 package live.yurii.autocatalog.application.generation;
 
-import live.yurii.autocatalog.application.shared.EntityNotFoundException;
+import live.yurii.autocatalog.domain.shared.EntityNotFoundException;
 import live.yurii.autocatalog.domain.generation.Generation;
 import live.yurii.autocatalog.domain.generation.GenerationId;
 import live.yurii.autocatalog.domain.generation.GenerationRepository;

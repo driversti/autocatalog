@@ -2,7 +2,7 @@ package live.yurii.autocatalog.api.body;
 
 import live.yurii.autocatalog.api.shared.GlobalExceptionHandler;
 import live.yurii.autocatalog.application.body.BodyService;
-import live.yurii.autocatalog.application.shared.EntityNotFoundException;
+import live.yurii.autocatalog.domain.shared.EntityNotFoundException;
 import live.yurii.autocatalog.domain.body.Body;
 import live.yurii.autocatalog.domain.body.BodyId;
 import live.yurii.autocatalog.domain.body.BodyStyle;

@@ -1,4 +1,4 @@
-package live.yurii.autocatalog.application.shared;
+package live.yurii.autocatalog.domain.shared;
 
 public class EntityNotFoundException extends RuntimeException {
   public EntityNotFoundException(String message) {

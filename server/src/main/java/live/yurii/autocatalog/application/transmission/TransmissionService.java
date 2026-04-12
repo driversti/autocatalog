@@ -1,6 +1,6 @@
 package live.yurii.autocatalog.application.transmission;
 
-import live.yurii.autocatalog.application.shared.EntityNotFoundException;
+import live.yurii.autocatalog.domain.shared.EntityNotFoundException;
 import live.yurii.autocatalog.domain.transmission.Transmission;
 import live.yurii.autocatalog.domain.transmission.TransmissionId;
 import live.yurii.autocatalog.domain.transmission.TransmissionRepository;

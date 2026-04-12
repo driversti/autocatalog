@@ -1,6 +1,6 @@
 package live.yurii.autocatalog.application.model;
 
-import live.yurii.autocatalog.application.shared.EntityNotFoundException;
+import live.yurii.autocatalog.domain.shared.EntityNotFoundException;
 import live.yurii.autocatalog.domain.make.MakeId;
 import live.yurii.autocatalog.domain.make.MakeRepository;
 import live.yurii.autocatalog.domain.model.CarModel;

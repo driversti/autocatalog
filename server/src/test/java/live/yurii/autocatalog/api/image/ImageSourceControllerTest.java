@@ -1,7 +1,7 @@
 package live.yurii.autocatalog.api.image;
 
 import live.yurii.autocatalog.api.shared.GlobalExceptionHandler;
-import live.yurii.autocatalog.application.shared.EntityNotFoundException;
+import live.yurii.autocatalog.domain.shared.EntityNotFoundException;
 import live.yurii.autocatalog.infrastructure.image.ImageSourceService;
 import live.yurii.autocatalog.infrastructure.persistence.image.ImageSourceJpaEntity;
 import org.junit.jupiter.api.Test;

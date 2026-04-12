@@ -2,7 +2,7 @@ package live.yurii.autocatalog.api.model;
 
 import live.yurii.autocatalog.api.shared.GlobalExceptionHandler;
 import live.yurii.autocatalog.application.model.CarModelService;
-import live.yurii.autocatalog.application.shared.EntityNotFoundException;
+import live.yurii.autocatalog.domain.shared.EntityNotFoundException;
 import live.yurii.autocatalog.domain.make.MakeId;
 import live.yurii.autocatalog.domain.model.CarModel;
 import live.yurii.autocatalog.domain.model.ModelId;
