@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import MakePage from "./pages/MakePage";
 import ModelPage from "./pages/ModelPage";
 import SearchPage from "./pages/SearchPage";
+import CopyrightPage from "./pages/legal/CopyrightPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 class ErrorBoundary extends Component<
@@ -60,6 +61,7 @@ export default function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/search" element={<SearchPage />} />
+          <Route path="/legal/copyright" element={<CopyrightPage />} />
           <Route path="/:makeSlug" element={<MakePage />} />
           <Route path="/:makeSlug/:modelSlug" element={<ModelPage />} />
           <Route path="*" element={<NotFoundPage />} />
