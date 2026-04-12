@@ -4,6 +4,17 @@ description: Known AutoCatalog API behaviors that affect data-loading workflow
 type: project
 ---
 
+## Variant link endpoint returns engineIds not engines
+
+`POST /api/v1/variants/{id}/engines/{engineId}` returns the updated VariantResponse
+which has `engineIds` (array of UUID strings), NOT a top-level `engines` key. Check
+for `"engineIds"` in response to confirm success.
+
+## Markets are added via separate endpoint per market
+
+`POST /api/v1/variants/{id}/markets/{market}` — one call per ISO alpha-2 code.
+No bulk endpoint exists. Response is 200 with updated VariantResponse.
+
 ## Duplicate prevention (as of 2026-04-11, migration V7)
 
 All create endpoints now return **409 Conflict** on duplicate natural keys:
@@ -53,12 +64,19 @@ already has a petrol CVT FWD variant, the hybrid CVT FWD variant gets a 409.
 Workaround: use AWD drivetrain for the hybrid AWD-i variant (which is the more
 common hybrid config anyway) or link the hybrid engines to the existing CVT variant.
 
-## EngineRequest primitive fields
+## EngineRequest nullable numeric fields (updated 2026-04-11)
 
-`torqueNm`, `powerKw`, `displacementCc`, `cylinderCount` are all primitive `int`
-fields in the EngineRequest record — they CANNOT be omitted or set to null.
-For electric motors: use `displacementCc: 1` (minimum valid value), `cylinderCount: 1`.
-Omitting torqueNm causes a 400 error with Jackson deserialization message.
+As of the current schema, `displacementCc`, `torqueNm`, and `cylinderCount` are
+`Integer` (nullable) in EngineRequest — they are NOT in the `required` array and
+can be **omitted entirely** for electric motors. However, when present, they must
+satisfy their `minimum: 1` constraint. Do NOT send `null` — just omit the field.
+`powerKw` is also nullable/optional (no `minimum` constraint shown in spec).
+
+For electric motors: omit `displacementCc`, `torqueNm`, `cylinderCount` entirely.
+Include `powerKw` and `torqueNm` only when the values are known from specs.
+
+**Previous (wrong) note:** prior memory said these were primitive `int` fields requiring
+values like `displacementCc: 1` as workaround. This is outdated — fields can be omitted.
 
 ## GET /api/v1/models requires makeId query param
 

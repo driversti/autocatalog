@@ -37,4 +37,9 @@ type: reference
 - Wikipedia is the fastest single source for generation names and year ranges for European mainstream brands.
 - Official VW press/media sites confirm current-gen specs but often don't list historical generations.
 - For Japanese domestic market (JDM) engine variants, skip if not confirmed for European/global market — too many regional-only codes exist.
-- Electric motors for Toyota hybrids use NM-FXE / MM-FXE naming convention. displacementCc must be >= 1 (API constraint — torqueNm also cannot be null/omitted as it maps to primitive int).
+- Electric motors for Toyota hybrids use NM-FXE / MM-FXE naming convention. displacementCc, torqueNm, cylinderCount can now be OMITTED for electric motors (schema updated to Integer/nullable). No workaround values needed.
+- Corolla E210 Hybrid electric motor code: 6NM, powerKw=53, torqueNm=163 (front motor only, FWD or AWD-i).
+- RAV4 XA50 Hybrid uses 3-motor config: A25A-FXS (ICE) + 3NM-FXE (front, 88kW) + 1MM-FXE (rear, 40kW). All three linked to same variant. systemPowerKw=163.
+- Camry XV40 hybrid systemPowerKw: 147kW combined. XV50: 151kW. XV70: 160kW.
+- XV70 V6 (2GR-FKS) uses AWD drivetrain in the model to avoid uniqueness conflict with 2.5L AT8 FWD variant.
+- Corolla E210 Hybrid: systemPowerKw=90 (1.8L ICE + 6NM electric). AWD drivetrain used for sedan/wagon hybrid variants to separate from petrol CVT FWD.
