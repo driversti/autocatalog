@@ -1,0 +1,66 @@
+package live.yurii.autocatalog.application.model;
+
+import live.yurii.autocatalog.domain.shared.EntityNotFoundException;
+import live.yurii.autocatalog.domain.generation.GenerationRepository;
+import live.yurii.autocatalog.domain.make.MakeId;
+import live.yurii.autocatalog.domain.make.MakeRepository;
+import live.yurii.autocatalog.domain.model.CarModel;
+import live.yurii.autocatalog.domain.model.CarModelRepository;
+import live.yurii.autocatalog.domain.model.ModelId;
+import live.yurii.autocatalog.domain.model.ModelRelation;
+
+import java.util.List;
+
+public class CarModelService {
+
+  private final CarModelRepository modelRepository;
+  private final MakeRepository makeRepository;
+  private final GenerationRepository generationRepository;
+
+  public CarModelService(CarModelRepository modelRepository, MakeRepository makeRepository,
+                         GenerationRepository generationRepository) {
+    this.modelRepository = modelRepository;
+    this.makeRepository = makeRepository;
+    this.generationRepository = generationRepository;
+  }
+
+  public CarModel create(MakeId makeId, String name) {
+    if (makeRepository.findById(makeId).isEmpty())
+      throw new EntityNotFoundException("Make not found: " + makeId.value());
+    if (modelRepository.existsByMakeIdAndName(makeId, name))
+      throw new IllegalStateException("Model already exists for make " + makeId.value() + ": " + name);
+    return modelRepository.save(CarModel.create(makeId, name));
+  }
+
+  public CarModel getById(ModelId id) {
+    return modelRepository.findById(id)
+      .orElseThrow(() -> new EntityNotFoundException("Model not found: " + id.value()));
+  }
+
+  public List<CarModel> getByMake(MakeId makeId) {
+    return modelRepository.findByMakeId(makeId);
+  }
+
+  public CarModel linkRelation(ModelId fromId, ModelId toId,
+                               ModelRelation.Type type, String note) {
+    var from = getById(fromId);
+    getById(toId);
+    from.addRelation(toId, type, note);
+    return modelRepository.save(from);
+  }
+
+  public void deleteById(ModelId id) {
+    getById(id);
+    if (generationRepository.existsByModelId(id))
+      throw new IllegalStateException("Cannot delete model: dependent generations exist");
+    modelRepository.deleteById(id);
+  }
+
+  public CarModel rename(ModelId id, String newName) {
+    var model = getById(id);
+    if (modelRepository.existsByMakeIdAndName(model.makeId(), newName))
+      throw new IllegalStateException("Model already exists: " + newName);
+    model.rename(newName);
+    return modelRepository.save(model);
+  }
+}

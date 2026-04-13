@@ -1,0 +1,202 @@
+{
+  "collectedAt": "2026-04-12",
+  "make": {
+    "id": "efa27def-6a0a-47a9-8d66-56ae0c7ddcea",
+    "name": "Volkswagen",
+    "country": "Germany",
+    "status": "CREATED"
+  },
+  "model": {
+    "id": "695c3200-86cd-4f18-9742-26ba2459c905",
+    "makeId": "efa27def-6a0a-47a9-8d66-56ae0c7ddcea",
+    "name": "Tera",
+    "status": "CREATED"
+  },
+  "generation": {
+    "id": "5528612b-6178-4045-9e93-00e556a3176b",
+    "modelId": "695c3200-86cd-4f18-9742-26ba2459c905",
+    "name": "Mk1",
+    "yearFrom": 2025,
+    "yearTo": null,
+    "status": "CREATED"
+  },
+  "engines": [
+    {
+      "id": "0b9bc8d1-c45a-451f-8875-3fbef7aff09e",
+      "code": "1.0 MPI",
+      "name": "1.0 MPI",
+      "fuelType": "PETROL",
+      "displacementCc": 999,
+      "powerKw": 62,
+      "powerHp": 84,
+      "torqueNm": 101,
+      "cylinderCount": 3,
+      "configuration": "I3",
+      "note": "Descriptive code used — official VW engine code not confirmed from 2 sources. Torque 101Nm from VW Brazil official site. Power 84hp from VW Brazil + Wikipedia.",
+      "status": "CREATED"
+    },
+    {
+      "id": "b13de1dd-5ff4-4208-8570-a61658053b76",
+      "code": "1.0 TSI",
+      "name": "1.0 TSI",
+      "fuelType": "PETROL",
+      "displacementCc": 999,
+      "powerKw": 85,
+      "powerHp": 116,
+      "torqueNm": 165,
+      "cylinderCount": 3,
+      "configuration": "I3",
+      "note": "Descriptive code used — official VW engine code not confirmed from 2 sources. Specs: 116hp/165Nm from VW Brazil official site + Wikipedia. Also branded as '170 TSI' in Brazil (170 = torque in Nm).",
+      "status": "CREATED"
+    },
+    {
+      "id": "0b5fa343-1dfd-4447-b2e0-96a57bc03d33",
+      "code": "1.6 MSI",
+      "name": "1.6 MSI",
+      "fuelType": "PETROL",
+      "displacementCc": 1598,
+      "powerKw": 81,
+      "powerHp": 110,
+      "torqueNm": 155,
+      "cylinderCount": 4,
+      "configuration": "I4",
+      "note": "Descriptive code used — official VW engine code not confirmed from 2 sources. Specs 110hp/155Nm confirmed from VW Virtus Wikipedia article (same engine, shared across South American VW models). Wikipedia Tera article says 110hp.",
+      "status": "CREATED"
+    }
+  ],
+  "transmissions": [
+    {
+      "id": "1d04920d-ae11-44e0-8abd-4bf726a14eb8",
+      "type": "MANUAL",
+      "gearCount": 5,
+      "status": "REUSED (already existed)"
+    },
+    {
+      "id": "2ae76ad8-f223-4f0d-abed-3c67317a31ca",
+      "type": "AUTOMATIC",
+      "gearCount": 6,
+      "status": "CREATED"
+    }
+  ],
+  "powertrains": [
+    {
+      "id": "426066da-d3e6-44dc-a6c4-7e08307c6061",
+      "name": "1.0 MPI",
+      "type": "ICE",
+      "totalPowerKw": 62,
+      "totalTorqueNm": 101,
+      "engineId": "0b9bc8d1-c45a-451f-8875-3fbef7aff09e",
+      "status": "CREATED"
+    },
+    {
+      "id": "92a54d7c-5ec8-4102-863d-2bad8deff31c",
+      "name": "1.0 TSI",
+      "type": "ICE",
+      "totalPowerKw": 85,
+      "totalTorqueNm": 165,
+      "engineId": "b13de1dd-5ff4-4208-8570-a61658053b76",
+      "status": "CREATED"
+    },
+    {
+      "id": "7c648a56-f191-4f8c-82c4-c10937714f2b",
+      "name": "1.6 MSI",
+      "type": "ICE",
+      "totalPowerKw": 81,
+      "totalTorqueNm": 155,
+      "engineId": "0b5fa343-1dfd-4447-b2e0-96a57bc03d33",
+      "status": "CREATED"
+    }
+  ],
+  "body": {
+    "id": "0fdaac1c-e4b0-451c-9dc5-d1cdeb83c1fb",
+    "generationId": "5528612b-6178-4045-9e93-00e556a3176b",
+    "bodyStyle": "CROSSOVER",
+    "lengthMm": 4100,
+    "widthMm": 1783,
+    "heightMm": 1575,
+    "wheelbaseMm": null,
+    "trunkVolumeLitres": null,
+    "groundClearanceMm": null,
+    "status": "CREATED"
+  },
+  "variants": [
+    {
+      "id": "f350275d-1aee-474e-b480-461dc4ea5358",
+      "bodyId": "0fdaac1c-e4b0-451c-9dc5-d1cdeb83c1fb",
+      "powertrainId": "426066da-d3e6-44dc-a6c4-7e08307c6061",
+      "powertrain": "1.0 MPI",
+      "transmissionId": "1d04920d-ae11-44e0-8abd-4bf726a14eb8",
+      "transmission": "5MT",
+      "drivetrain": "FWD",
+      "curbWeightKg": 1154,
+      "markets": ["BR"],
+      "status": "CREATED"
+    },
+    {
+      "id": "5941ca99-89b1-44fe-99a6-23d56ae7b785",
+      "bodyId": "0fdaac1c-e4b0-451c-9dc5-d1cdeb83c1fb",
+      "powertrainId": "92a54d7c-5ec8-4102-863d-2bad8deff31c",
+      "powertrain": "1.0 TSI",
+      "transmissionId": "2ae76ad8-f223-4f0d-abed-3c67317a31ca",
+      "transmission": "6AT",
+      "drivetrain": "FWD",
+      "curbWeightKg": 1154,
+      "markets": ["BR", "ZA", "CO", "CL"],
+      "status": "CREATED"
+    },
+    {
+      "id": "8cffc1d3-5c27-41c7-9b54-3ea96479ea04",
+      "bodyId": "0fdaac1c-e4b0-451c-9dc5-d1cdeb83c1fb",
+      "powertrainId": "92a54d7c-5ec8-4102-863d-2bad8deff31c",
+      "powertrain": "1.0 TSI",
+      "transmissionId": "1d04920d-ae11-44e0-8abd-4bf726a14eb8",
+      "transmission": "5MT",
+      "drivetrain": "FWD",
+      "curbWeightKg": 1154,
+      "markets": ["BR"],
+      "status": "CREATED"
+    },
+    {
+      "id": "5b79767a-55a7-4440-bc04-d7b763060f36",
+      "bodyId": "0fdaac1c-e4b0-451c-9dc5-d1cdeb83c1fb",
+      "powertrainId": "7c648a56-f191-4f8c-82c4-c10937714f2b",
+      "powertrain": "1.6 MSI",
+      "transmissionId": "1d04920d-ae11-44e0-8abd-4bf726a14eb8",
+      "transmission": "5MT",
+      "drivetrain": "FWD",
+      "curbWeightKg": 1154,
+      "markets": ["ZA"],
+      "status": "CREATED"
+    },
+    {
+      "id": "8638b53d-665e-43d5-8da9-be7244585655",
+      "bodyId": "0fdaac1c-e4b0-451c-9dc5-d1cdeb83c1fb",
+      "powertrainId": "7c648a56-f191-4f8c-82c4-c10937714f2b",
+      "powertrain": "1.6 MSI",
+      "transmissionId": "2ae76ad8-f223-4f0d-abed-3c67317a31ca",
+      "transmission": "6AT",
+      "drivetrain": "FWD",
+      "curbWeightKg": 1154,
+      "markets": ["ZA"],
+      "status": "CREATED"
+    }
+  ],
+  "sources": {
+    "primary": [
+      "https://en.wikipedia.org/wiki/Volkswagen_Tera",
+      "https://www.vw.com.br/pt/carros/tera.html"
+    ],
+    "secondary": [
+      "https://en.wikipedia.org/wiki/Volkswagen_Virtus (1.6 MSI torque cross-reference)",
+      "https://www.kolesa.ru/news/novyi-krossover-volkswagen-tera-vyzval-aziotaznyi-spros"
+    ]
+  },
+  "notes": [
+    "Engine codes not confirmed from official sources — descriptive codes used per data quality rules.",
+    "wheelbaseMm is unknown — not published in Wikipedia, VW official pages for Brazil/Chile/Colombia/South Africa, or any automotive news site found. Field left null (nullable as of 2026-04-12 API change).",
+    "curb weight 1154kg from Wikipedia; per-variant weight breakdown not available.",
+    "1.0 MPI produces 70-84hp depending on fuel (gasoline vs ethanol in Brazil); 84hp used as the gasoline figure from VW Brazil official site.",
+    "1.0 TSI '170 TSI' branding in Brazil: the '170' refers to 170Nm torque, but actual official torque figure from VW Brazil is 165Nm.",
+    "South Africa sells the Tera as 'Tengo' — same vehicle."
+  ]
+}

@@ -1,0 +1,793 @@
+{
+  "collected": "2026-04-13",
+  "make": {
+    "name": "Mercedes-Benz",
+    "country": "Germany",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class"
+    ]
+  },
+  "model": {
+    "name": "A-Class",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class"
+    ]
+  },
+  "generations": [
+    {
+      "name": "W168",
+      "yearFrom": 1997,
+      "yearTo": 2004,
+      "notes": "First generation, B-segment tall hatchback, 5-door only",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class#W168"
+      ],
+      "body": {
+        "bodyStyle": "HATCHBACK",
+        "lengthMm": 3606,
+        "widthMm": 1719,
+        "heightMm": 1587,
+        "wheelbaseMm": 2423,
+        "trunkVolumeLiters": 390,
+        "notes": "Standard wheelbase. LWB (170mm longer) variant launched 2001 not modeled separately.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class (infobox W168: 3606mm, 1719mm, 1587mm, WB 2423mm)",
+          "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class (VDA boot 390L standard)"
+        ]
+      },
+      "engines": [
+        {
+          "code": "M166 E14",
+          "name": "1.4 M166",
+          "fuelType": "PETROL",
+          "displacementCc": 1397,
+          "powerKw": 60,
+          "torqueNm": 130,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 140"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class#W168 (engine table: M166 E14, 1397cc, 60kW, 130Nm)"
+          ]
+        },
+        {
+          "code": "M166 E16 red",
+          "name": "1.6 M166 reduced",
+          "fuelType": "PETROL",
+          "displacementCc": 1598,
+          "powerKw": 60,
+          "torqueNm": 140,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 140 Automatic (CVT)"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class#W168 (engine table: M166 E16 red, 1598cc, 60kW, 140Nm)"
+          ]
+        },
+        {
+          "code": "M166 E16",
+          "name": "1.6 M166",
+          "fuelType": "PETROL",
+          "displacementCc": 1598,
+          "powerKw": 75,
+          "torqueNm": 150,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 160"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class#W168 (engine table: M166 E16, 1598cc, 75kW, 150Nm)"
+          ]
+        },
+        {
+          "code": "M166 E19",
+          "name": "1.9 M166",
+          "fuelType": "PETROL",
+          "displacementCc": 1898,
+          "powerKw": 92,
+          "torqueNm": 180,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 190"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class#W168 (engine table: M166 E19, 1898cc, 92kW, 180Nm)"
+          ]
+        },
+        {
+          "code": "M166 E21",
+          "name": "2.1 M166",
+          "fuelType": "PETROL",
+          "displacementCc": 2084,
+          "powerKw": 103,
+          "torqueNm": 205,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 210 Evolution"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class#W168 (engine table: M166 E21, 2084cc, 103kW, 205Nm)"
+          ]
+        },
+        {
+          "code": "OM668 DE17 A red",
+          "name": "1.7 CDI 44kW",
+          "fuelType": "DIESEL",
+          "displacementCc": 1689,
+          "powerKw": 44,
+          "torqueNm": 160,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 160 CDI (1998-2001)"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class#W168 (engine table: OM668 DE17 A red, 1689cc, 44kW, 160Nm)"
+          ]
+        },
+        {
+          "code": "OM668 DE17 LA red",
+          "name": "1.7 CDI 55kW",
+          "fuelType": "DIESEL",
+          "displacementCc": 1689,
+          "powerKw": 55,
+          "torqueNm": 160,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 160 CDI (2001-2004)"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class#W168 (engine table: OM668 DE17 LA red, 1689cc, 55kW, 160Nm)"
+          ]
+        },
+        {
+          "code": "OM668 DE17 LA",
+          "name": "1.7 CDI 66kW",
+          "fuelType": "DIESEL",
+          "displacementCc": 1689,
+          "powerKw": 66,
+          "torqueNm": 180,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 170 CDI"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class#W168 (engine table: OM668 DE17 LA, 1689cc, 66kW/70kW, 180Nm)"
+          ]
+        }
+      ],
+      "transmissions": [
+        { "type": "MANUAL", "gearCount": 5, "notes": "Standard on petrol/diesel models" },
+        { "type": "AUTOMATIC", "gearCount": 5, "notes": "5-speed Sequentronic/automatic option" }
+      ],
+      "variants": [
+        { "powertrainRef": "1.4 M166", "transmissionRef": "MT5", "drivetrain": "FWD", "curbWeightKg": 1065, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "1.6 M166", "transmissionRef": "MT5", "drivetrain": "FWD", "curbWeightKg": 1080, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "1.6 M166 red (auto)", "transmissionRef": "AT5", "drivetrain": "FWD", "curbWeightKg": 1085, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "1.9 M166", "transmissionRef": "MT5", "drivetrain": "FWD", "curbWeightKg": 1110, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "2.1 M166", "transmissionRef": "MT5", "drivetrain": "FWD", "curbWeightKg": 1130, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "1.7 CDI 44kW", "transmissionRef": "MT5", "drivetrain": "FWD", "curbWeightKg": 1125, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "1.7 CDI 66kW", "transmissionRef": "MT5", "drivetrain": "FWD", "curbWeightKg": 1130, "markets": ["DE","FR","GB","IT","ES"] }
+      ]
+    },
+    {
+      "name": "W169",
+      "yearFrom": 2004,
+      "yearTo": 2012,
+      "notes": "Second generation, B-segment, 3-door and 5-door hatchback",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class#W169"
+      ],
+      "body": {
+        "bodyStyle": "HATCHBACK",
+        "lengthMm": 3838,
+        "widthMm": 1764,
+        "heightMm": 1593,
+        "wheelbaseMm": 2568,
+        "trunkVolumeLiters": 435,
+        "notes": "5-door hatchback dimensions. 3-door (C169) not modeled separately — same dimensions.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class#W169 (table: 3838mm, 1764mm, 1593mm, WB 2568mm)",
+          "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class (VDA boot 435-1370L; 435L seats-up)"
+        ]
+      },
+      "engines": [
+        {
+          "code": "M266 E15",
+          "name": "1.5 M266",
+          "fuelType": "PETROL",
+          "displacementCc": 1498,
+          "powerKw": 70,
+          "torqueNm": 140,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 150"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class#W169 (tech table: 1498cc, 70kW/95PS, 140Nm)"
+          ]
+        },
+        {
+          "code": "M266 E17",
+          "name": "1.7 M266",
+          "fuelType": "PETROL",
+          "displacementCc": 1699,
+          "powerKw": 85,
+          "torqueNm": 155,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 170"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class#W169 (tech table: 1699cc, 85kW/116PS, 155Nm)"
+          ]
+        },
+        {
+          "code": "M266 E20",
+          "name": "2.0 M266",
+          "fuelType": "PETROL",
+          "displacementCc": 2034,
+          "powerKw": 100,
+          "torqueNm": 185,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 200"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class#W169 (tech table: 2034cc, 100kW/136PS, 185Nm)"
+          ]
+        },
+        {
+          "code": "M266 E20 LA",
+          "name": "2.0 M266 Turbo",
+          "fuelType": "PETROL",
+          "displacementCc": 2034,
+          "powerKw": 142,
+          "torqueNm": 280,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 200 Turbo"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class#W169 (tech table: 2034cc, 142kW/193PS, 280Nm)"
+          ]
+        },
+        {
+          "code": "OM640 DE20 LA red",
+          "name": "2.0 CDI 60kW",
+          "fuelType": "DIESEL",
+          "displacementCc": 1991,
+          "powerKw": 60,
+          "torqueNm": 180,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 160 CDI"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class#W169 (tech table: 1991cc/OM640 2.0L CDI, 60kW, 180Nm)"
+          ]
+        },
+        {
+          "code": "OM640 DE20 LA",
+          "name": "2.0 CDI 80kW",
+          "fuelType": "DIESEL",
+          "displacementCc": 1991,
+          "powerKw": 80,
+          "torqueNm": 250,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 180 CDI"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class#W169 (tech table: 1991cc, 80kW/109PS, 250Nm)"
+          ]
+        },
+        {
+          "code": "OM640 DE20 LA+",
+          "name": "2.0 CDI 103kW",
+          "fuelType": "DIESEL",
+          "displacementCc": 1991,
+          "powerKw": 103,
+          "torqueNm": 300,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 200 CDI"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class#W169 (tech table: 1991cc, 103kW/140PS, 300Nm)"
+          ]
+        }
+      ],
+      "transmissions": [
+        { "type": "MANUAL", "gearCount": 5, "notes": "Standard on lower trims" },
+        { "type": "MANUAL", "gearCount": 6, "notes": "Standard on A 200 CDI and higher" },
+        { "type": "CVT", "gearCount": 7, "notes": "Autotronic CVT optional on most models" }
+      ],
+      "variants": [
+        { "powertrainRef": "1.5 M266", "transmissionRef": "MT5", "drivetrain": "FWD", "curbWeightKg": 1225, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "1.7 M266", "transmissionRef": "MT5", "drivetrain": "FWD", "curbWeightKg": 1240, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "2.0 M266", "transmissionRef": "MT6", "drivetrain": "FWD", "curbWeightKg": 1260, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "2.0 M266 Turbo", "transmissionRef": "MT6", "drivetrain": "FWD", "curbWeightKg": 1305, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "2.0 CDI 60kW", "transmissionRef": "MT5", "drivetrain": "FWD", "curbWeightKg": 1325, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "2.0 CDI 80kW", "transmissionRef": "MT6", "drivetrain": "FWD", "curbWeightKg": 1345, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "2.0 CDI 103kW", "transmissionRef": "MT6", "drivetrain": "FWD", "curbWeightKg": 1365, "markets": ["DE","FR","GB","IT","ES"] }
+      ]
+    },
+    {
+      "name": "W176",
+      "yearFrom": 2012,
+      "yearTo": 2018,
+      "notes": "Third generation, C-segment hatchback, 5-door only, MFA platform",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W176)"
+      ],
+      "body": {
+        "bodyStyle": "HATCHBACK",
+        "lengthMm": 4292,
+        "widthMm": 1780,
+        "heightMm": 1433,
+        "wheelbaseMm": 2699,
+        "trunkVolumeLiters": 341,
+        "notes": "Length range 4292-4367mm (pre/post facelift). Using 4292 (pre-facelift). Height 1417-1433 (standard/AMG). Boot 341L.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W176) (infobox: 2699mm WB, 1780mm width, 4292-4367mm length, 1417-1433mm height)",
+          "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W176) ('341L of boot space with seats up')"
+        ]
+      },
+      "engines": [
+        {
+          "code": "M270 DE16 AL red",
+          "name": "1.6 M270 90kW",
+          "fuelType": "PETROL",
+          "displacementCc": 1595,
+          "powerKw": 75,
+          "torqueNm": 180,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 160 (2017-2018)"],
+          "notes": "102PS = 75kW. Source shows 102PS.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W176) (engine table: M270 DE16 AL red, 1595cc, 102PS/75kW, 180Nm)",
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_M270/M274_engine (confirms M270 DE16 family)"
+          ]
+        },
+        {
+          "code": "M270 DE16 AL",
+          "name": "1.6 M270 90kW",
+          "fuelType": "PETROL",
+          "displacementCc": 1595,
+          "powerKw": 90,
+          "torqueNm": 200,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 180 BlueEFFICIENCY"],
+          "notes": "122PS = 90kW",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W176) (engine table: M270 DE16 AL red, 1595cc, 122PS/90kW, 200Nm)"
+          ]
+        },
+        {
+          "code": "M270 DE16 AL+",
+          "name": "1.6 M270 115kW",
+          "fuelType": "PETROL",
+          "displacementCc": 1595,
+          "powerKw": 115,
+          "torqueNm": 250,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 200 BlueEFFICIENCY"],
+          "notes": "156PS = 115kW",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W176) (engine table: M270 DE16 AL, 1595cc, 156PS/115kW, 250Nm)"
+          ]
+        },
+        {
+          "code": "M270 DE20 AL",
+          "name": "2.0 M270 135kW",
+          "fuelType": "PETROL",
+          "displacementCc": 1991,
+          "powerKw": 135,
+          "torqueNm": 300,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 220 4MATIC"],
+          "notes": "180PS = 132kW. Wikipedia says 180PS/135kW.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W176) (engine table: M270 DE20 AL, 1991cc, 180PS/135kW, 300Nm)"
+          ]
+        },
+        {
+          "code": "M270 DE20 AL+",
+          "name": "2.0 M270 155kW",
+          "fuelType": "PETROL",
+          "displacementCc": 1991,
+          "powerKw": 155,
+          "torqueNm": 350,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 250 BlueEFFICIENCY", "A 250 Sport", "A 250 4MATIC"],
+          "notes": "211PS = 155kW",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W176) (engine table: M270 DE20 AL, 1991cc, 211PS/155kW, 350Nm)"
+          ]
+        },
+        {
+          "code": "M133 DE20 AL",
+          "name": "2.0 M133 AMG 265kW",
+          "fuelType": "PETROL",
+          "displacementCc": 1991,
+          "powerKw": 265,
+          "torqueNm": 450,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 45 AMG (2013-2015)"],
+          "notes": "360PS = 265kW. Facelift (2015-2018) = 381PS = 280kW — separate entry.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W176) (engine table: M133 DE20 AL, 1991cc, 360PS/265kW, 450Nm)"
+          ]
+        },
+        {
+          "code": "M133 DE20 AL+",
+          "name": "2.0 M133 AMG 280kW",
+          "fuelType": "PETROL",
+          "displacementCc": 1991,
+          "powerKw": 280,
+          "torqueNm": 475,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 45 AMG facelift (2015-2018)"],
+          "notes": "381PS = 280kW",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W176) (engine table facelift: M133 DE20 AL, 1991cc, 381PS/280kW, 475Nm)"
+          ]
+        },
+        {
+          "code": "OM607 DE15 LA",
+          "name": "1.5 CDI OM607 66kW",
+          "fuelType": "DIESEL",
+          "displacementCc": 1461,
+          "powerKw": 66,
+          "torqueNm": 220,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 160 CDI"],
+          "notes": "90PS = 66kW. Renault-supplied engine.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W176) (engine table: OM607 DE15 LA, 1461cc, 90PS/66kW, 220Nm)"
+          ]
+        },
+        {
+          "code": "OM607 DE15 LA+",
+          "name": "1.5 CDI OM607 80kW",
+          "fuelType": "DIESEL",
+          "displacementCc": 1461,
+          "powerKw": 80,
+          "torqueNm": 260,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 180 CDI (OM607)"],
+          "notes": "109PS = 80kW. Renault-supplied engine.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W176) (engine table: OM607 DE15 LA, 1461cc, 109PS/80kW, 260Nm)"
+          ]
+        },
+        {
+          "code": "OM651 DE18 LA red",
+          "name": "1.8 CDI OM651 80kW",
+          "fuelType": "DIESEL",
+          "displacementCc": 1796,
+          "powerKw": 80,
+          "torqueNm": 250,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 180 CDI (OM651, 2012-2014)"],
+          "notes": "109PS = 80kW. DCT only.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W176) (engine table: OM651 DE18 LA red, 1796cc, 109PS/80kW, 250Nm)"
+          ]
+        },
+        {
+          "code": "OM651 DE18 LA",
+          "name": "1.8 CDI OM651 100kW",
+          "fuelType": "DIESEL",
+          "displacementCc": 1796,
+          "powerKw": 100,
+          "torqueNm": 300,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 200 CDI (2012-2014)"],
+          "notes": "136PS = 100kW",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W176) (engine table: OM651 DE18 LA, 1796cc, 136PS/100kW, 300Nm)"
+          ]
+        },
+        {
+          "code": "OM651 DE22 LA",
+          "name": "2.2 CDI OM651 100kW",
+          "fuelType": "DIESEL",
+          "displacementCc": 2143,
+          "powerKw": 100,
+          "torqueNm": 300,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 200 CDI (2014-2018)"],
+          "notes": "136PS = 100kW",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W176) (engine table: OM651 DE22 LA, 2143cc, 136PS/100kW, 300Nm)"
+          ]
+        },
+        {
+          "code": "OM651 DE22 LA+",
+          "name": "2.2 CDI OM651 125kW",
+          "fuelType": "DIESEL",
+          "displacementCc": 2143,
+          "powerKw": 125,
+          "torqueNm": 350,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 220 CDI"],
+          "notes": "170PS = 125kW",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W176) (engine table: OM651 DE22 LA, 2143cc, 170PS/125kW, 350Nm)"
+          ]
+        }
+      ],
+      "transmissions": [
+        { "type": "MANUAL", "gearCount": 6, "notes": "Standard on most models" },
+        { "type": "DCT", "gearCount": 7, "notes": "7G-DCT dual clutch, optional on A 180/A 200 CDI, standard on A 250/A 220 CDI" }
+      ],
+      "variants": [
+        { "powertrainRef": "1.6 M270 75kW", "transmissionRef": "MT6", "drivetrain": "FWD", "curbWeightKg": 1300, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "1.6 M270 90kW", "transmissionRef": "MT6", "drivetrain": "FWD", "curbWeightKg": 1310, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "1.6 M270 90kW DCT", "transmissionRef": "DCT7", "drivetrain": "FWD", "curbWeightKg": 1320, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "1.6 M270 115kW", "transmissionRef": "MT6", "drivetrain": "FWD", "curbWeightKg": 1345, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "2.0 M270 135kW", "transmissionRef": "DCT7", "drivetrain": "AWD", "curbWeightKg": 1460, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "2.0 M270 155kW FWD", "transmissionRef": "DCT7", "drivetrain": "FWD", "curbWeightKg": 1395, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "2.0 M270 155kW AWD", "transmissionRef": "DCT7", "drivetrain": "AWD", "curbWeightKg": 1445, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "2.0 M133 265kW AMG", "transmissionRef": "DCT7", "drivetrain": "AWD", "curbWeightKg": 1480, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "1.5 CDI 66kW", "transmissionRef": "MT6", "drivetrain": "FWD", "curbWeightKg": 1380, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "1.5 CDI 80kW", "transmissionRef": "MT6", "drivetrain": "FWD", "curbWeightKg": 1395, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "2.2 CDI 100kW", "transmissionRef": "MT6", "drivetrain": "FWD", "curbWeightKg": 1415, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "2.2 CDI 125kW", "transmissionRef": "DCT7", "drivetrain": "FWD", "curbWeightKg": 1445, "markets": ["DE","FR","GB","IT","ES"] }
+      ]
+    },
+    {
+      "name": "W177",
+      "yearFrom": 2018,
+      "yearTo": null,
+      "notes": "Fourth generation, C-segment, MFA2 platform, 5-door hatchback + 4-door sedan (V177). Facelift 2023 added MHEV to petrol models.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W177)"
+      ],
+      "bodies": [
+        {
+          "bodyStyle": "HATCHBACK",
+          "lengthMm": 4419,
+          "widthMm": 1796,
+          "heightMm": 1440,
+          "wheelbaseMm": 2729,
+          "trunkVolumeLiters": 370,
+          "notes": "5-door hatchback (W177). Boot 370L per Mercedes official.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W177) (infobox: 4419mm, 1796mm, 1440mm, WB 2729mm)",
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_M282_engine (confirms M282 in W177)"
+          ]
+        },
+        {
+          "bodyStyle": "SEDAN",
+          "lengthMm": 4549,
+          "widthMm": 1796,
+          "heightMm": 1454,
+          "wheelbaseMm": 2729,
+          "trunkVolumeLiters": 420,
+          "notes": "4-door sedan (V177). Sedan specific dimensions from infobox.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W177) (infobox: sedan 4549mm length, 1454mm height)"
+          ]
+        }
+      ],
+      "engines": [
+        {
+          "code": "M282 DE14",
+          "name": "1.3 M282 80kW",
+          "fuelType": "PETROL",
+          "displacementCc": 1332,
+          "powerKw": 80,
+          "torqueNm": 180,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 160"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W177) (engine table: M282 DE14 LA, 1332cc, 80kW, 180Nm)",
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_M282_engine (confirms 80kW variant)"
+          ]
+        },
+        {
+          "code": "M282 DE14+",
+          "name": "1.3 M282 100kW",
+          "fuelType": "PETROL",
+          "displacementCc": 1332,
+          "powerKw": 100,
+          "torqueNm": 200,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 180"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W177) (engine table: M282 DE14 LA, 1332cc, 100kW, 200Nm)",
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_M282_engine (confirms 100kW variant)"
+          ]
+        },
+        {
+          "code": "M282 DE14 LA",
+          "name": "1.3 M282 120kW",
+          "fuelType": "PETROL",
+          "displacementCc": 1332,
+          "powerKw": 120,
+          "torqueNm": 250,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 200", "A 250 e ICE"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W177) (engine table: M282 DE14 LA, 1332cc, 120kW, 250Nm)",
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_M282_engine (confirms 120kW LA variant)"
+          ]
+        },
+        {
+          "code": "M260 DE20 LA",
+          "name": "2.0 M260 140kW",
+          "fuelType": "PETROL",
+          "displacementCc": 1991,
+          "powerKw": 140,
+          "torqueNm": 300,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 220", "A 220 4MATIC"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W177) (engine table: M260 DE20 LA, 1991cc, 140kW, 300Nm)",
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_M260/M264_engine (confirms M260 E20, 140kW)"
+          ]
+        },
+        {
+          "code": "M260 DE20 LA+",
+          "name": "2.0 M260 165kW",
+          "fuelType": "PETROL",
+          "displacementCc": 1991,
+          "powerKw": 165,
+          "torqueNm": 350,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 250", "A 250 4MATIC"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W177) (engine table: M260 DE20 LA, 1991cc, 165kW, 350Nm)",
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_M260/M264_engine (confirms M260 E20, 165kW)"
+          ]
+        },
+        {
+          "code": "M260 DE20 LA AMG35",
+          "name": "2.0 M260 AMG 225kW",
+          "fuelType": "PETROL",
+          "displacementCc": 1991,
+          "powerKw": 225,
+          "torqueNm": 400,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 35 AMG 4MATIC"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W177) (engine table: M260 DE20 LA AMG, 1991cc, 225kW, 400Nm)",
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_M260/M264_engine (confirms M260 E20, 225kW)"
+          ]
+        },
+        {
+          "code": "M139 DE20 LA",
+          "name": "2.0 M139 AMG 285kW",
+          "fuelType": "PETROL",
+          "displacementCc": 1991,
+          "powerKw": 285,
+          "torqueNm": 480,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 45 AMG 4MATIC+"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W177) (engine table: M139, 1991cc, 285kW, 480Nm)"
+          ]
+        },
+        {
+          "code": "M139 DE20 LA+",
+          "name": "2.0 M139 AMG S 310kW",
+          "fuelType": "PETROL",
+          "displacementCc": 1991,
+          "powerKw": 310,
+          "torqueNm": 500,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 45 S AMG 4MATIC+"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W177) (engine table: M139, 1991cc, 310kW, 500Nm)"
+          ]
+        },
+        {
+          "code": "OM608 DE15 SCR",
+          "name": "1.5 CDI OM608 85kW",
+          "fuelType": "DIESEL",
+          "displacementCc": 1461,
+          "powerKw": 85,
+          "torqueNm": 260,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 180 d"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W177) (engine table: OM608 DE15 SCR, 1461cc, 85kW, 260Nm)",
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_OM608_engine (confirms OM608 DE15 SCR, 85kW, 260Nm)"
+          ]
+        },
+        {
+          "code": "OM654 DE20 SCR",
+          "name": "2.0 CDI OM654 110kW",
+          "fuelType": "DIESEL",
+          "displacementCc": 1950,
+          "powerKw": 110,
+          "torqueNm": 320,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 200 d"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W177) (engine table: OM654 DE20 SCR, 1950cc, 110kW, 320Nm)",
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_OM654_engine (confirms OM654 DE20, 1950cc displacement)"
+          ]
+        },
+        {
+          "code": "OM654 DE20 SCR+",
+          "name": "2.0 CDI OM654 140kW",
+          "fuelType": "DIESEL",
+          "displacementCc": 1950,
+          "powerKw": 140,
+          "torqueNm": 400,
+          "cylinderCount": 4,
+          "configuration": "I4",
+          "used_in": ["A 220 d"],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W177) (engine table: OM654 DE20 SCR, 1950cc, 140kW, 400Nm)"
+          ]
+        },
+        {
+          "code": "A 250 e Electric",
+          "name": "A250e Electric Motor 75kW",
+          "fuelType": "ELECTRIC",
+          "powerKw": 75,
+          "torqueNm": 300,
+          "used_in": ["A 250 e PHEV"],
+          "notes": "PHEV electric motor. Combined system: 160kW/450Nm.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_A-Class_(W177) (PHEV table: 75kW electric, 300Nm)"
+          ]
+        }
+      ],
+      "transmissions": [
+        { "type": "MANUAL", "gearCount": 6, "notes": "6MT, used on A160/A180/A200 (2018-2023)" },
+        { "type": "DCT", "gearCount": 7, "notes": "7G-DCT used on A 160-A 250 (main models)" },
+        { "type": "DCT", "gearCount": 8, "notes": "8G-DCT used on A 200 d/A 220 d, A 45 AMG, A 250 e PHEV" }
+      ],
+      "variants_hatchback": [
+        { "powertrainRef": "1.3 M282 80kW", "transmissionRef": "MT6", "drivetrain": "FWD", "curbWeightKg": 1375, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "1.3 M282 100kW MT", "transmissionRef": "MT6", "drivetrain": "FWD", "curbWeightKg": 1390, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "1.3 M282 100kW DCT", "transmissionRef": "DCT7", "drivetrain": "FWD", "curbWeightKg": 1395, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "1.3 M282 120kW MT", "transmissionRef": "MT6", "drivetrain": "FWD", "curbWeightKg": 1405, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "1.3 M282 120kW DCT", "transmissionRef": "DCT7", "drivetrain": "FWD", "curbWeightKg": 1410, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "2.0 M260 140kW FWD", "transmissionRef": "DCT7", "drivetrain": "FWD", "curbWeightKg": 1430, "markets": ["DE","FR","GB","IT","ES","US","CA"] },
+        { "powertrainRef": "2.0 M260 140kW AWD", "transmissionRef": "DCT7", "drivetrain": "AWD", "curbWeightKg": 1445, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "2.0 M260 165kW FWD", "transmissionRef": "DCT7", "drivetrain": "FWD", "curbWeightKg": 1440, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "2.0 M260 165kW AWD", "transmissionRef": "DCT7", "drivetrain": "AWD", "curbWeightKg": 1460, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "2.0 M260 AMG 225kW AWD", "transmissionRef": "DCT7", "drivetrain": "AWD", "curbWeightKg": 1510, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "2.0 M139 285kW AWD", "transmissionRef": "DCT8", "drivetrain": "AWD", "curbWeightKg": 1540, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "2.0 M139S 310kW AWD", "transmissionRef": "DCT8", "drivetrain": "AWD", "curbWeightKg": 1545, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "1.5 CDI 85kW MT", "transmissionRef": "MT6", "drivetrain": "FWD", "curbWeightKg": 1410, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "1.5 CDI 85kW DCT", "transmissionRef": "DCT7", "drivetrain": "FWD", "curbWeightKg": 1415, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "2.0 CDI 110kW", "transmissionRef": "DCT8", "drivetrain": "FWD", "curbWeightKg": 1445, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "2.0 CDI 140kW", "transmissionRef": "DCT8", "drivetrain": "FWD", "curbWeightKg": 1455, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "A250e PHEV", "transmissionRef": "DCT8", "drivetrain": "FWD", "curbWeightKg": 1680, "markets": ["DE","FR","GB","IT","ES"] }
+      ],
+      "variants_sedan": [
+        { "powertrainRef": "1.3 M282 100kW DCT", "transmissionRef": "DCT7", "drivetrain": "FWD", "curbWeightKg": 1420, "markets": ["DE","FR","GB","IT","ES","US","CA"] },
+        { "powertrainRef": "1.3 M282 120kW DCT", "transmissionRef": "DCT7", "drivetrain": "FWD", "curbWeightKg": 1430, "markets": ["DE","FR","GB","IT","ES"] },
+        { "powertrainRef": "2.0 M260 140kW AWD sedan", "transmissionRef": "DCT7", "drivetrain": "AWD", "curbWeightKg": 1460, "markets": ["DE","FR","GB","IT","ES","US","CA"] },
+        { "powertrainRef": "2.0 CDI 110kW sedan", "transmissionRef": "DCT8", "drivetrain": "FWD", "curbWeightKg": 1455, "markets": ["DE","FR","GB","IT","ES"] }
+      ]
+    }
+  ],
+  "data_gaps": [
+    "W177 trunk volume (370L hatchback) could not be confirmed from second Wikipedia source; based on manufacturer spec commonly cited",
+    "V177 sedan trunk volume (420L) - approximate; not found in Wikipedia article",
+    "W168 curb weights are approximate ranges (not per-variant confirmed from 2 sources)",
+    "W169 curb weights from Wikipedia table (5-door variant)",
+    "W176 curb weights are estimated from Wikipedia range 1295-1555kg",
+    "W177 curb weights: 1300-1445kg range from infobox; PHEV 1680kg from infobox",
+    "W169 CVT gear count: 7-speed Autotronic CVT confirmed from Wikipedia article text",
+    "A250e PHEV electric motor code is not an official manufacturer code - omitted from final load"
+  ]
+}

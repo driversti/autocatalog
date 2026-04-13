@@ -1,0 +1,599 @@
+{
+  "_meta": {
+    "collected": "2026-04-12",
+    "agent": "data-collector",
+    "model": "claude-sonnet-4-6",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Opel_Insignia",
+      "https://en.wikipedia.org/wiki/GM_Family_0_engine",
+      "https://en.wikipedia.org/wiki/GM_Family_1_engine",
+      "https://en.wikipedia.org/wiki/GM_Ecotec_engine",
+      "https://en.wikipedia.org/wiki/GM_High_Feature_engine",
+      "https://en.wikipedia.org/wiki/Fiat_JTD_engine",
+      "https://en.wikipedia.org/wiki/GM_Medium_Diesel_engine"
+    ]
+  },
+
+  "make": {
+    "id": "8fc64261-bd23-4ed3-9fed-fd989d869efe",
+    "name": "Opel",
+    "country": "Germany",
+    "source": "https://en.wikipedia.org/wiki/Opel_Insignia"
+  },
+
+  "model": {
+    "id": "ea034c43-60ca-4709-ab64-7ccabba2bae1",
+    "name": "Insignia",
+    "makeId": "8fc64261-bd23-4ed3-9fed-fd989d869efe",
+    "source": "https://en.wikipedia.org/wiki/Opel_Insignia"
+  },
+
+  "generations": [
+    {
+      "id": "597a6a24-bed9-4124-b009-e50715f2140c",
+      "name": "A (G09)",
+      "modelId": "ea034c43-60ca-4709-ab64-7ccabba2bae1",
+      "yearFrom": 2008,
+      "yearTo": 2017,
+      "platform": "GM Epsilon II SWB",
+      "notes": "Production: October 2008 – April 2017. Available as saloon, liftback, and Sports Tourer wagon.",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — infobox G09 production dates"
+    },
+    {
+      "id": "4c915759-8720-4342-8f31-97ea90ee6823",
+      "name": "B (Z18)",
+      "modelId": "ea034c43-60ca-4709-ab64-7ccabba2bae1",
+      "yearFrom": 2017,
+      "yearTo": 2022,
+      "platform": "GM E2XX (updated Epsilon II)",
+      "notes": "Saloon dropped. Only Grand Sport liftback and Sports Tourer wagon. Production ended most markets 2022.",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — Second generation (Z18; 2017) section"
+    }
+  ],
+
+  "engines": [
+    {
+      "id": "7ef6887c-6f6b-4967-9f75-fa071d00cfb5",
+      "code": "A14NET",
+      "name": "1.4 Turbo",
+      "fuelType": "PETROL",
+      "displacementCc": 1364,
+      "powerKw": 103,
+      "powerPs": 140,
+      "torqueNm": 200,
+      "cylinderCount": 4,
+      "configuration": "INLINE",
+      "aspirationType": "TURBOCHARGED",
+      "usedIn": "Insignia A (2011-2017)",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — 2011-13 petrol table: 140PS/103kW at 4900-6000rpm; confirmed https://en.wikipedia.org/wiki/GM_Family_0_engine A14NET row"
+    },
+    {
+      "id": "c4e0ccd6-b245-4b89-b830-6b38c1ece30e",
+      "code": "A16XER",
+      "name": "1.6 VVT",
+      "fuelType": "PETROL",
+      "displacementCc": 1598,
+      "powerKw": 85,
+      "powerPs": 115,
+      "torqueNm": 155,
+      "cylinderCount": 4,
+      "configuration": "INLINE",
+      "aspirationType": "NATURALLY_ASPIRATED",
+      "usedIn": "Insignia A (2008-2012)",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — 2008-13 petrol table: 115PS at 6000rpm, 155Nm; confirmed https://en.wikipedia.org/wiki/GM_Family_1_engine Gen III Z16XER/A16XER row: 85kW at 6000rpm, 155Nm"
+    },
+    {
+      "id": "ec43ac2a-90df-40b7-b00f-20ea64aa30bf",
+      "code": "A16LET",
+      "name": "1.6 Turbo",
+      "fuelType": "PETROL",
+      "displacementCc": 1598,
+      "powerKw": 132,
+      "powerPs": 180,
+      "torqueNm": 230,
+      "cylinderCount": 4,
+      "configuration": "INLINE",
+      "aspirationType": "TURBOCHARGED",
+      "usedIn": "Insignia A (2008-2013)",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — 2008-13 petrol table: 180PS at 5500rpm, 230Nm; confirmed https://en.wikipedia.org/wiki/GM_Family_1_engine A16LET row: 132kW at 5500rpm"
+    },
+    {
+      "id": "8e3b5eb7-6e0c-4654-971a-24f010bc40cb",
+      "code": "A16XHT",
+      "name": "1.6 SIDI Turbo",
+      "fuelType": "PETROL",
+      "displacementCc": 1598,
+      "powerKw": 125,
+      "powerPs": 170,
+      "torqueNm": 260,
+      "cylinderCount": 4,
+      "configuration": "INLINE",
+      "aspirationType": "TURBOCHARGED",
+      "usedIn": "Insignia A facelift (2013-2017)",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — 2013-17 petrol table: 1.6 SIDI Turbo 170PS at 4250rpm, 260Nm (overboost 280Nm)"
+    },
+    {
+      "id": "6c2054f2-ee9f-4ca2-bc8b-6409f56262ad",
+      "code": "A18XER",
+      "name": "1.8 VVT",
+      "fuelType": "PETROL",
+      "displacementCc": 1796,
+      "powerKw": 103,
+      "powerPs": 140,
+      "torqueNm": 175,
+      "cylinderCount": 4,
+      "configuration": "INLINE",
+      "aspirationType": "NATURALLY_ASPIRATED",
+      "usedIn": "Insignia A (2008-2017)",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — petrol tables: 140PS at 6300rpm, 175Nm; confirmed https://en.wikipedia.org/wiki/GM_Family_1_engine A18XER at 1796cc"
+    },
+    {
+      "id": "0944a367-11bb-49d0-9cef-c11bba87137c",
+      "code": "A20NHT",
+      "name": "2.0 Turbo",
+      "fuelType": "PETROL",
+      "displacementCc": 1998,
+      "powerKw": 162,
+      "powerPs": 220,
+      "torqueNm": 350,
+      "cylinderCount": 4,
+      "configuration": "INLINE",
+      "aspirationType": "TURBOCHARGED",
+      "usedIn": "Insignia A (2008-2013)",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — 2008-13 petrol table: 220PS/162kW at 5300rpm, 350Nm; confirmed https://en.wikipedia.org/wiki/GM_Ecotec_engine LDK (A20NHT) table: 162kW/220PS for Opel Insignia 2008-2013"
+    },
+    {
+      "id": "cb83de97-cb81-48f9-91d1-d38a30a75abd",
+      "code": "A20NFT",
+      "name": "2.0 SIDI Turbo",
+      "fuelType": "PETROL",
+      "displacementCc": 1998,
+      "powerKw": 184,
+      "powerPs": 250,
+      "torqueNm": 400,
+      "cylinderCount": 4,
+      "configuration": "INLINE",
+      "aspirationType": "TURBOCHARGED",
+      "usedIn": "Insignia A facelift (2013-2017)",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — 2013-17 petrol table note: 'A20NFT (used in Astra J GTC VXR/OPC)', 250PS at 4500rpm, 400Nm; confirmed https://en.wikipedia.org/wiki/GM_Ecotec_engine LTG table: Insignia A 2013-2017, 250PS/184kW"
+    },
+    {
+      "id": "13d48974-807d-476f-bdd2-e6a9c20aa201",
+      "code": "LP9",
+      "name": "2.8 Turbo V6",
+      "fuelType": "PETROL",
+      "displacementCc": 2792,
+      "powerKw": 191,
+      "powerPs": 260,
+      "torqueNm": 350,
+      "cylinderCount": 6,
+      "configuration": "V_TYPE",
+      "aspirationType": "TURBOCHARGED",
+      "usedIn": "Insignia A (2009-2013)",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — 2008-13 petrol table: 2.8T V6, 260PS at 5500rpm, 350Nm; confirmed https://en.wikipedia.org/wiki/GM_High_Feature_engine LP9 table: Opel/Vauxhall Insignia V6 4x4 256hp/191kW, 350Nm"
+    },
+    {
+      "id": "4a078263-3ee8-4fd2-9657-fd21f7b559cf",
+      "code": "LP9-OPC",
+      "name": "2.8 Turbo V6 OPC",
+      "fuelType": "PETROL",
+      "displacementCc": 2792,
+      "powerKw": 239,
+      "powerPs": 325,
+      "torqueNm": 435,
+      "cylinderCount": 6,
+      "configuration": "V_TYPE",
+      "aspirationType": "TURBOCHARGED",
+      "usedIn": "Insignia A OPC/VXR (2009-2013)",
+      "codeNote": "LP9 engine family; no distinct OPC code documented; LP9-OPC used as API identifier",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — 2008-13 petrol table: OPC/VXR 325PS at 5500rpm, 435Nm; confirmed https://en.wikipedia.org/wiki/GM_High_Feature_engine LP9 table: Opel/Vauxhall Insignia OPC/VXR 321hp/239kW, 435Nm"
+    },
+    {
+      "id": "88e3e2ac-88f9-4549-bce0-37b774634404",
+      "code": "D20DTH",
+      "name": "2.0 CDTI 110",
+      "fuelType": "DIESEL",
+      "displacementCc": 1956,
+      "powerKw": 81,
+      "powerPs": 110,
+      "torqueNm": 260,
+      "cylinderCount": 4,
+      "configuration": "INLINE",
+      "aspirationType": "TURBOCHARGED",
+      "usedIn": "Insignia A (2008-2012)",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — 2008-13 diesel table: 2.0 CDTI 110PS at 4000rpm, 260Nm; confirmed https://en.wikipedia.org/wiki/Fiat_JTD_engine D20DTH section: 1956cc I4 CDTI used in Opel Insignia"
+    },
+    {
+      "id": "af051721-8710-4625-b3c6-356ed4e7627b",
+      "code": "A20DTJ",
+      "name": "2.0 CDTI 130",
+      "fuelType": "DIESEL",
+      "displacementCc": 1956,
+      "powerKw": 96,
+      "powerPs": 130,
+      "torqueNm": 300,
+      "cylinderCount": 4,
+      "configuration": "INLINE",
+      "aspirationType": "TURBOCHARGED",
+      "usedIn": "Insignia A (2008-2013)",
+      "codeNote": "Opel A-series naming convention; specific code A20DTJ inferred from Opel/GM power variant naming pattern",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — 2008-13 diesel table: 2.0 CDTI 130PS at 4000rpm, 300Nm"
+    },
+    {
+      "id": "251c19f8-daea-4814-acc3-4434e8ca67ea",
+      "code": "A20DTR",
+      "name": "2.0 CDTI 160",
+      "fuelType": "DIESEL",
+      "displacementCc": 1956,
+      "powerKw": 118,
+      "powerPs": 160,
+      "torqueNm": 350,
+      "cylinderCount": 4,
+      "configuration": "INLINE",
+      "aspirationType": "TURBOCHARGED",
+      "usedIn": "Insignia A (2008-2013)",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — 2008-13 diesel table: 2.0 CDTI 160PS at 4000rpm, 350Nm"
+    },
+    {
+      "id": "a9842552-d94c-4237-b449-ee14234ce358",
+      "code": "A20DTT",
+      "name": "2.0 CDTI BiTurbo",
+      "fuelType": "DIESEL",
+      "displacementCc": 1956,
+      "powerKw": 143,
+      "powerPs": 195,
+      "torqueNm": 400,
+      "cylinderCount": 4,
+      "configuration": "INLINE",
+      "aspirationType": "TWIN_TURBOCHARGED",
+      "usedIn": "Insignia A (2012-2013)",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — 2008-13 diesel table: 2.0 CDTI Bi-Turbo 195PS at 4000rpm, 400Nm (2012-13)"
+    },
+    {
+      "id": "6c7d6a6d-d97a-4e53-a500-7cd546ebf992",
+      "code": "B16DTJ",
+      "name": "1.6 CDTI 120",
+      "fuelType": "DIESEL",
+      "displacementCc": 1598,
+      "powerKw": 88,
+      "powerPs": 120,
+      "torqueNm": 320,
+      "cylinderCount": 4,
+      "configuration": "INLINE",
+      "aspirationType": "TURBOCHARGED",
+      "usedIn": "Insignia A facelift (2015-2017)",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — 2013-17 diesel table: 1.6 CDTI 120PS at 4000rpm, 320Nm (2015-17); confirmed https://en.wikipedia.org/wiki/GM_Medium_Diesel_engine B16DTJ: Opel Insignia A 1.6 CDTI 120HP, 08/2015-02/2017, 320Nm"
+    },
+    {
+      "id": "01ed4c0a-1840-41aa-aaec-171048072ec3",
+      "code": "B16DTH",
+      "name": "1.6 CDTI 136",
+      "fuelType": "DIESEL",
+      "displacementCc": 1598,
+      "powerKw": 100,
+      "powerPs": 136,
+      "torqueNm": 320,
+      "cylinderCount": 4,
+      "configuration": "INLINE",
+      "aspirationType": "TURBOCHARGED",
+      "usedIn": "Insignia A facelift (2015-2017), Insignia B (2017-2020)",
+      "source": "https://en.wikipedia.org/wiki/GM_Medium_Diesel_engine B16DTH: 136/4000 HP, 320Nm, Opel Insignia A (08/2015-02/2017) and Opel Insignia B (02/2017-02/2020)"
+    },
+    {
+      "id": "f184b6f5-1ab2-48b4-8439-c3cb3107bdb7",
+      "code": "LFV",
+      "name": "1.5 EcoTec Turbo 140",
+      "fuelType": "PETROL",
+      "displacementCc": 1490,
+      "powerKw": 103,
+      "powerPs": 140,
+      "torqueNm": 250,
+      "cylinderCount": 4,
+      "configuration": "INLINE",
+      "aspirationType": "TURBOCHARGED",
+      "usedIn": "Insignia B (2017-)",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — Insignia B petrol table: 1.5 EcoTec Turbo I4 1490cc 140PS at 5600rpm, 250Nm at 2000-4500rpm (2017-)"
+    },
+    {
+      "id": "c83f6463-ff0e-426a-b90f-eea59c5158ac",
+      "code": "LFV-165",
+      "name": "1.5 EcoTec Turbo 165",
+      "fuelType": "PETROL",
+      "displacementCc": 1490,
+      "powerKw": 121,
+      "powerPs": 165,
+      "torqueNm": 250,
+      "cylinderCount": 4,
+      "configuration": "INLINE",
+      "aspirationType": "TURBOCHARGED",
+      "usedIn": "Insignia B (2017-)",
+      "codeNote": "LFV family, higher output tune; LFV-165 used as API code to distinguish from 140PS variant",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — Insignia B petrol table: 1.5 EcoTec Turbo I4 1490cc 165PS at 5600rpm, 250Nm (2017-)"
+    },
+    {
+      "id": "fe4d7b26-4291-49bd-8e3c-1709c854cefc",
+      "code": "LTG",
+      "name": "2.0 EcoTec SIDI Turbo",
+      "fuelType": "PETROL",
+      "displacementCc": 1998,
+      "powerKw": 191,
+      "powerPs": 260,
+      "torqueNm": 400,
+      "cylinderCount": 4,
+      "configuration": "INLINE",
+      "aspirationType": "TURBOCHARGED",
+      "usedIn": "Insignia B GSi (2017-)",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — Insignia B petrol table: 2.0 EcoTec Turbo I4 1998cc 260PS at 5300rpm, 400Nm (2017-); confirmed https://en.wikipedia.org/wiki/GM_Ecotec_engine LTG table: Opel Insignia B GSi 260PS/191kW at 5300rpm, 400Nm"
+    },
+    {
+      "id": "70c5626b-cb9a-45a1-b611-9d7b78b8e5b6",
+      "code": "B16DTL",
+      "name": "1.6 CDTI 110",
+      "fuelType": "DIESEL",
+      "displacementCc": 1598,
+      "powerKw": 81,
+      "powerPs": 110,
+      "torqueNm": 300,
+      "cylinderCount": 4,
+      "configuration": "INLINE",
+      "aspirationType": "TURBOCHARGED",
+      "usedIn": "Insignia B (2017-2019)",
+      "source": "https://en.wikipedia.org/wiki/GM_Medium_Diesel_engine B16DTL: Opel Insignia B 1.6 CDTI (110HP), 02/2017-10/2019, 300Nm at 2000-2250rpm"
+    },
+    {
+      "id": "fe1830ae-e356-485d-b29c-b9eee5813a39",
+      "code": "D20DTH-170",
+      "name": "2.0 CDTI 170",
+      "fuelType": "DIESEL",
+      "displacementCc": 1956,
+      "powerKw": 125,
+      "powerPs": 170,
+      "torqueNm": 400,
+      "cylinderCount": 4,
+      "configuration": "INLINE",
+      "aspirationType": "TURBOCHARGED",
+      "usedIn": "Insignia B (2017-2020)",
+      "codeNote": "D20DTH family engine at 170PS tune; D20DTH-170 used as API code",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — Insignia B diesel table: 2.0 CDTI S/S I4 1956cc 170PS at 3750rpm, 400Nm (2017-)"
+    },
+    {
+      "id": "306c0236-0821-4f23-b69c-ba08661d4906",
+      "code": "D20DTH-BT",
+      "name": "2.0 CDTI BiTurbo 210",
+      "fuelType": "DIESEL",
+      "displacementCc": 1956,
+      "powerKw": 154,
+      "powerPs": 210,
+      "torqueNm": 480,
+      "cylinderCount": 4,
+      "configuration": "INLINE",
+      "aspirationType": "TWIN_TURBOCHARGED",
+      "usedIn": "Insignia B 4x4 (2017-)",
+      "codeNote": "D20DTH BiTurbo family; D20DTH-BT used as API code",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — Insignia B diesel table: 2.0 CDTI BiTurbo S/S 4x4 I4 1956cc 210PS at 4000rpm, 480Nm at 1750-2500rpm"
+    },
+    {
+      "id": "baba8693-8b6e-423d-ab04-61cc57ba1976",
+      "code": "F15DVH",
+      "name": "1.5 CDTI",
+      "fuelType": "DIESEL",
+      "displacementCc": 1496,
+      "powerKw": 90,
+      "powerPs": 122,
+      "torqueNm": 300,
+      "cylinderCount": 3,
+      "configuration": "INLINE",
+      "aspirationType": "TURBOCHARGED",
+      "usedIn": "Insignia B facelift (2020-2022)",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — Insignia B diesel table: 1.5 CDTI S/S I3 1496cc 122PS at 3500rpm, 300Nm at 1750-2000rpm (2020-); confirmed https://en.wikipedia.org/wiki/GM_Medium_Diesel_engine F15DVH: Opel Insignia B 1.5 CDTI (122HP) from 03/2020, 300Nm"
+    },
+    {
+      "id": "de92bc48-df35-42f7-a62c-ff437a4fcd6f",
+      "code": "F20DVH",
+      "name": "2.0 CDTI 174",
+      "fuelType": "DIESEL",
+      "displacementCc": 1995,
+      "powerKw": 128,
+      "powerPs": 174,
+      "torqueNm": 381,
+      "cylinderCount": 4,
+      "configuration": "INLINE",
+      "aspirationType": "TURBOCHARGED",
+      "usedIn": "Insignia B facelift (2020-2022)",
+      "source": "https://en.wikipedia.org/wiki/GM_Medium_Diesel_engine F20DVH: Opel Insignia B 2.0, from 03/2020, 174/3500 HP, 381/1500-2750 Nm, 1995cc"
+    }
+  ],
+
+  "transmissions": [
+    {
+      "id": "ad9fd171-ed0b-4fe4-9412-dd9d3cba45ed",
+      "type": "MANUAL",
+      "gearCount": 6,
+      "notes": "Standard MT6 for all Insignia A/B petrol and diesel FWD variants",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — infoboxes both gens: '6-speed manual'"
+    },
+    {
+      "id": "2ae76ad8-f223-4f0d-abed-3c67317a31ca",
+      "type": "AUTOMATIC",
+      "gearCount": 6,
+      "notes": "Hydramatic 6-speed AT for Insignia A and early Insignia B",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — infoboxes both gens: '6-speed automatic'"
+    },
+    {
+      "id": "c76affc8-4d72-45e7-8222-a2d1eba050d8",
+      "type": "AUTOMATIC",
+      "gearCount": 8,
+      "notes": "8-speed automatic for Insignia B (2017-)",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — Insignia B infobox: '8-speed automatic'"
+    },
+    {
+      "id": "ae0a780f-4365-4d5f-8199-8737b9147d24",
+      "type": "AUTOMATIC",
+      "gearCount": 9,
+      "notes": "ZF 9HP 9-speed automatic for Insignia B Grand Sport",
+      "source": "https://en.wikipedia.org/wiki/Opel_Insignia — Insignia B infobox: '9-speed ZF 9HP automatic (Insignia Grandsport)'"
+    }
+  ],
+
+  "bodies": {
+    "insignia_a": [
+      {
+        "id": "c13fdf54-6b47-463a-bded-ae969a64abe6",
+        "generationId": "597a6a24-bed9-4124-b009-e50715f2140c",
+        "bodyStyle": "SEDAN",
+        "lengthMm": 4830,
+        "widthMm": 1856,
+        "heightMm": 1498,
+        "wheelbaseMm": 2737,
+        "notes": "4-door saloon body",
+        "source": "https://en.wikipedia.org/wiki/Opel_Insignia — Insignia A infobox: 4830mm length, 1856mm width, 1498mm height, 2737mm wheelbase"
+      },
+      {
+        "id": "669f5f63-3cfa-4b52-965c-5652d0258676",
+        "generationId": "597a6a24-bed9-4124-b009-e50715f2140c",
+        "bodyStyle": "LIFTBACK",
+        "lengthMm": 4830,
+        "widthMm": 1856,
+        "heightMm": 1498,
+        "wheelbaseMm": 2737,
+        "notes": "5-door liftback/fastback; same exterior dimensions as saloon",
+        "source": "https://en.wikipedia.org/wiki/Opel_Insignia — 'The saloon and liftback variants have the same 4.83m length... All three models share the same 2.73m wheelbase'"
+      },
+      {
+        "id": "06a3c0f4-0529-441c-b1ed-f024463a8055",
+        "generationId": "597a6a24-bed9-4124-b009-e50715f2140c",
+        "bodyStyle": "WAGON",
+        "lengthMm": 4908,
+        "widthMm": 1856,
+        "heightMm": 1498,
+        "wheelbaseMm": 2737,
+        "notes": "5-door Sports Tourer estate; slightly longer at 4908mm",
+        "source": "https://en.wikipedia.org/wiki/Opel_Insignia — Insignia A infobox: estate 4908mm length; 'estate version is slightly longer at 4.91m'"
+      }
+    ],
+    "insignia_b": [
+      {
+        "id": "5945a7bb-e621-40b2-ad2a-9425602601ba",
+        "generationId": "4c915759-8720-4342-8f31-97ea90ee6823",
+        "bodyStyle": "LIFTBACK",
+        "lengthMm": 4897,
+        "widthMm": 1864,
+        "heightMm": 1455,
+        "wheelbaseMm": 2829,
+        "notes": "Grand Sport 5-door liftback; longer wheelbase than Gen A (+92mm)",
+        "source": "https://en.wikipedia.org/wiki/Opel_Insignia — Insignia B infobox: 4897mm length, 1864mm width, 1455mm height, 2829mm wheelbase"
+      },
+      {
+        "id": "e014aaaa-ad02-42db-877c-436b473645d0",
+        "generationId": "4c915759-8720-4342-8f31-97ea90ee6823",
+        "bodyStyle": "WAGON",
+        "lengthMm": 4986,
+        "widthMm": 1864,
+        "heightMm": 1455,
+        "wheelbaseMm": 2829,
+        "notes": "Sports Tourer 5-door estate",
+        "source": "https://en.wikipedia.org/wiki/Opel_Insignia — Insignia B infobox: wagon 4986mm length"
+      }
+    ]
+  },
+
+  "powertrains": {
+    "insignia_a_petrol": [
+      {"id": "b882e95b-03e6-44c5-9bf5-822216cc22f4", "name": "Opel 1.6 VVT A16XER 85kW", "engineCode": "A16XER"},
+      {"id": "3b9c915e-cd5d-45eb-a667-fc15548ed3b0", "name": "Opel 1.4T A14NET 103kW", "engineCode": "A14NET"},
+      {"id": "a9b8608d-a44f-4f48-ab65-6e8603787e6e", "name": "Opel 1.8 VVT A18XER 103kW", "engineCode": "A18XER"},
+      {"id": "9fab5014-9f74-483b-8a01-a0c65f0c78d4", "name": "Opel 1.6T A16LET 132kW", "engineCode": "A16LET"},
+      {"id": "032dd6bd-c75f-4559-811b-6f097b13e153", "name": "Opel 2.0T A20NHT 162kW", "engineCode": "A20NHT"},
+      {"id": "81cf8787-727f-4181-a7b7-90ab8aae39dd", "name": "Opel 2.8T V6 LP9 191kW", "engineCode": "LP9"},
+      {"id": "465c1815-3bbd-417e-ad01-a2a3b8e346a9", "name": "Opel 2.8T V6 OPC LP9 239kW", "engineCode": "LP9-OPC"},
+      {"id": "99ccdbdf-d19b-4a5f-8c5f-6101d9c5861a", "name": "Opel 1.6 SIDI A16XHT 125kW", "engineCode": "A16XHT", "notes": "facelift 2013-17"},
+      {"id": "d66ee5b4-e63c-4dbc-b15a-e96c48eec7ba", "name": "Opel 2.0 SIDI A20NFT 184kW", "engineCode": "A20NFT", "notes": "facelift 2013-17"}
+    ],
+    "insignia_a_diesel": [
+      {"id": "7a425ed7-8b99-4459-b0c1-028b8e24415d", "name": "Opel 2.0 CDTI D20DTH 81kW", "engineCode": "D20DTH"},
+      {"id": "7e527e1b-9b04-440c-88ed-710e9bfe5a90", "name": "Opel 2.0 CDTI A20DTJ 96kW", "engineCode": "A20DTJ"},
+      {"id": "843cead7-f5f8-4617-8f3d-0374692fa62b", "name": "Opel 2.0 CDTI A20DTR 118kW", "engineCode": "A20DTR"},
+      {"id": "d2f6adac-ba58-491b-b173-7aad6e7b8626", "name": "Opel 2.0 CDTI BiTurbo A20DTT 143kW", "engineCode": "A20DTT"},
+      {"id": "592b9ed4-0656-4051-8b03-d78fd9a78f18", "name": "Opel 1.6 CDTI B16DTJ 88kW", "engineCode": "B16DTJ", "notes": "facelift 2015-17"},
+      {"id": "02ccc5e6-9b35-4f99-b8bf-3c56bb5008f4", "name": "Opel 1.6 CDTI B16DTH 100kW", "engineCode": "B16DTH", "notes": "facelift 2015-17, also used in Insignia B"}
+    ],
+    "insignia_b_petrol": [
+      {"id": "46f76aa8-6825-4b75-ab92-cad6add5ce7f", "name": "Opel 1.5T LFV 103kW", "engineCode": "LFV"},
+      {"id": "a22e95ce-8ff8-415d-a94b-c2d29b7930bf", "name": "Opel 1.5T LFV-165 121kW", "engineCode": "LFV-165"},
+      {"id": "c52bc61c-40f9-4ef7-830b-a7d9ccee950d", "name": "Opel 2.0T LTG 191kW GSi", "engineCode": "LTG"}
+    ],
+    "insignia_b_diesel": [
+      {"id": "c06ec51d-5c19-435f-858b-08e77d7aad1d", "name": "Opel 1.6 CDTI B16DTL 81kW", "engineCode": "B16DTL"},
+      {"id": "02ccc5e6-9b35-4f99-b8bf-3c56bb5008f4", "name": "Opel 1.6 CDTI B16DTH 100kW", "engineCode": "B16DTH", "notes": "shared with Insignia A facelift"},
+      {"id": "656c67da-cbde-4cce-801a-64eaf2b4b86e", "name": "Opel 2.0 CDTI 170 125kW", "engineCode": "D20DTH-170"},
+      {"id": "357f96ff-7c39-40b7-9d3e-395b8e7af5a9", "name": "Opel 2.0 CDTI BiTurbo 154kW 4x4", "engineCode": "D20DTH-BT"},
+      {"id": "ff21c140-37b6-4d68-94bf-97453656408a", "name": "Opel 1.5 CDTI F15DVH 90kW", "engineCode": "F15DVH", "notes": "facelift 2020+"},
+      {"id": "8b2accd5-a736-463a-8e19-223d1abf1730", "name": "Opel 2.0 CDTI F20DVH 128kW", "engineCode": "F20DVH", "notes": "facelift 2020+"}
+    ]
+  },
+
+  "variants_summary": {
+    "total_created": 40,
+    "insignia_a_liftback": [
+      {"id": "4d19d1ff-c813-44a0-afa9-39eebf37a763", "engine": "A16XER 85kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "d1a54238-e328-41a6-9cbf-2ff1cb576b44", "engine": "A14NET 103kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "83744056-28fb-41d8-8be8-f717bbe7b57a", "engine": "A18XER 103kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "f6c62c62-6801-4bbf-b4da-255198959dd4", "engine": "A16LET 132kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "36fc99c8-812d-4b05-ac06-18690ba30da7", "engine": "A20NHT 162kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "d3f56206-4ef3-4c45-b338-8d786abfe1fb", "engine": "A20NHT 162kW", "trans": "AT6", "drive": "FWD"},
+      {"id": "ef819d83-b8ee-4921-b557-8e1b5428e26e", "engine": "A20NHT 162kW", "trans": "AT6", "drive": "AWD"},
+      {"id": "eeb5f5fa-6fad-4def-adb6-1c95600b0cea", "engine": "LP9 191kW", "trans": "AT6", "drive": "AWD"},
+      {"id": "cbdedeaa-dd62-4cd8-b85b-168b056306ff", "engine": "LP9-OPC 239kW", "trans": "AT6", "drive": "AWD"},
+      {"id": "6d1911fe-1300-46b8-8c4a-1820d61e6169", "engine": "D20DTH 81kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "859deb99-9f12-4363-b099-5245b8b081be", "engine": "A20DTJ 96kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "eddf69c4-6e6b-4afd-b18c-cac4928deb29", "engine": "A20DTJ 96kW", "trans": "AT6", "drive": "FWD"},
+      {"id": "badb15d3-0f14-4412-a443-44ceab2c85d5", "engine": "A20DTR 118kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "4ae7cb0e-33fc-4265-9c9c-8419f89bcce0", "engine": "A20DTR 118kW", "trans": "AT6", "drive": "FWD"},
+      {"id": "b22dc7db-25f5-402e-a3f2-f96cf71dccf2", "engine": "A20DTR 118kW", "trans": "MT6", "drive": "AWD"},
+      {"id": "2788660b-aec6-4f6c-a0ae-4400e811c7c7", "engine": "A20DTT 143kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "678273d3-2138-4e78-9307-ffad2c75bd7e", "engine": "A16XHT 125kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "fbc28f07-757d-4ade-8cf7-83cd0b1b837b", "engine": "A20NFT 184kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "7f2306ee-8735-49c7-ba2d-519eb860e9c2", "engine": "B16DTJ 88kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "9be72576-d043-4d65-980f-e53e180def2f", "engine": "B16DTH 100kW", "trans": "MT6", "drive": "FWD"}
+    ],
+    "insignia_a_sedan": [
+      {"id": "e914dd05-cd9b-455d-8f8e-40531b046dd9", "engine": "A20DTR 118kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "6c55253a-5185-40ae-a0fb-af9742b1abb0", "engine": "A20NHT 162kW", "trans": "MT6", "drive": "FWD"}
+    ],
+    "insignia_a_wagon": [
+      {"id": "415b1363-892b-423d-ade8-4a588bb0c393", "engine": "A20DTR 118kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "1a04ea4a-91ee-477e-a513-b4f56c9dc28b", "engine": "A20NHT 162kW", "trans": "AT6", "drive": "AWD"}
+    ],
+    "insignia_b_liftback": [
+      {"id": "9c6a179a-1379-4380-b0b2-ddc81378abc6", "engine": "LFV 103kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "e4d5af75-02ad-46a2-8db0-fe6022701a0b", "engine": "LFV-165 121kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "5e362885-515a-4ae9-8bc4-da4ca0962e0e", "engine": "LFV-165 121kW", "trans": "AT8", "drive": "FWD"},
+      {"id": "341d6239-caf5-4f6f-98ad-bc27f8ab9883", "engine": "LTG 191kW", "trans": "AT9", "drive": "AWD"},
+      {"id": "443feadb-3941-40c4-a29a-205b4392e732", "engine": "B16DTL 81kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "e6410217-b97a-4aa3-ba46-4c6ef3e2f737", "engine": "B16DTH 100kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "7c838998-15dd-4619-83ec-31596af25255", "engine": "B16DTH 100kW", "trans": "AT6", "drive": "FWD"},
+      {"id": "d9c1d535-fd4b-49c0-8921-4ee9dae800f0", "engine": "D20DTH-170 125kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "22219caf-7481-40df-8fa5-bc414f68a7be", "engine": "D20DTH-170 125kW", "trans": "AT8", "drive": "FWD"},
+      {"id": "fabb3dd0-28f6-4d44-8c73-c91a1b80606e", "engine": "D20DTH-BT 154kW", "trans": "AT8", "drive": "AWD"}
+    ],
+    "insignia_b_wagon": [
+      {"id": "eda89735-90c5-4a0d-9196-8cc0fc84e3a3", "engine": "LFV-165 121kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "d41e75f5-5696-4cbc-af28-9d6f1110ebd8", "engine": "D20DTH-170 125kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "f7586da7-b4e0-4097-8146-66b75a19a381", "engine": "D20DTH-170 125kW", "trans": "AT8", "drive": "AWD"},
+      {"id": "048ea506-c4fb-4066-9e88-6e074b0e662a", "engine": "LTG 191kW", "trans": "AT9", "drive": "AWD"},
+      {"id": "33db31bf-3304-48c0-ba86-ca468efdfb68", "engine": "F15DVH 90kW", "trans": "MT6", "drive": "FWD"},
+      {"id": "86d72ed7-769e-47e5-ac91-d931f17054da", "engine": "F20DVH 128kW", "trans": "MT6", "drive": "FWD"}
+    ]
+  },
+
+  "data_quality_notes": [
+    "Trunk volumes omitted: not found explicitly in Wikipedia text (only body dimensions confirmed).",
+    "Engine codes A20DTJ and A20DTR: follow Opel A-series naming pattern but not individually confirmed from a second source with exact code. Values (power/torque) confirmed from Wikipedia Insignia table.",
+    "A20DTT code: following Opel A-series convention for BiTurbo diesel; confirmed in Opel Astra/Zafira engine listings.",
+    "LP9-OPC: not a distinct GM code; the OPC Insignia used the LP9 engine at higher output. LP9-OPC used as API-level unique identifier only.",
+    "LFV and LFV-165: The 1.5T engine family code in GM is LFV for the base version; 165PS variant uses same family but higher tune. LFV-165 is an API-level disambiguator.",
+    "D20DTH-170 and D20DTH-BT: Insignia B diesel engine family codes; base code D20DTH confirmed by Fiat JTD article, output variants use suffixes as API disambiguators.",
+    "Heights for Insignia A wagon not separately confirmed; Wikipedia gives single height of 1498mm for all A body styles.",
+    "Curb weights: Wikipedia gives range 1470-1610kg for Gen A and 1440-1649kg for Gen B. Individual variant weights estimated from range by engine/drivetrain type — not individually source-confirmed."
+  ]
+}

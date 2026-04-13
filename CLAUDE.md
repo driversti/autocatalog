@@ -1,0 +1,169 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project
+
+AutoCatalog — automotive encyclopedia REST API (makes, models, generations, engines, transmissions, powertrains). Java 25, Spring Boot 4, PostgreSQL, Flyway, SpringDoc OpenAPI.
+
+## Project layout
+
+```
+server/     Java backend (Spring Boot, Maven)
+web/        Frontend (placeholder)
+compose.yaml   shared Docker Compose (Postgres)
+db/         mounted Postgres data (gitignored)
+```
+
+## Commands
+
+All Maven commands must be run from `server/`:
+
+```bash
+cd server
+./mvnw spring-boot:run                 # run app (Flyway migrates on startup; devtools + docker-compose auto-starts Postgres via compose.yaml)
+./mvnw test                            # full test suite: domain unit, controller slice, JPA adapter, e2e with Testcontainers
+./mvnw test -Dtest=EngineTest          # single test class
+./mvnw test -Dtest=EngineTest#createsEngine  # single test method
+./mvnw flyway:migrate                  # apply migrations manually
+./mvnw spring-boot:build-image         # build OCI image
+```
+
+Swagger UI: http://localhost:8080/swagger-ui.html
+
+The app uses `spring-boot-docker-compose` — running `./mvnw spring-boot:run` will auto-start the Postgres service defined in `compose.yaml` at the project root (configured via `spring.docker.compose.file=../compose.yaml`). The `db/` directory holds mounted Postgres data and should not be committed.
+
+## Architecture — DDD + Ports & Adapters
+
+Four packages under `live.yurii.autocatalog`, each with sub-packages per aggregate (`engine`, `electricmotor`, `fuelcellstack`, `generation`, `make`, `model`, `powertrain`, `powerunit`, `transmission`, `body`, `variant`, plus `shared`):
+
+```
+domain/         pure Java — no Spring, no JPA, no Lombok. Entities, value objects, repository interfaces, domain exceptions.
+application/    use cases / services. Plain classes, no Spring annotations. Depend only on domain.
+infrastructure/ JPA entities + repository adapters (implement domain repo interfaces), ApplicationConfig (Composition Root).
+api/            REST controllers, request/response DTOs (records), exception handler.
+```
+
+**The Composition Root pattern is load-bearing.** Services are wired manually with `@Bean` methods in `infrastructure/config/ApplicationConfig.java` — not via `@Service` / component scan. This is what lets `application/` stay free of Spring annotations. When adding a new service, register it there; do not annotate it with `@Service`.
+
+**Domain aggregate pattern** (see `domain/engine/Engine.java` as the canonical example):
+- Private no-arg constructor; state mutated only via explicit methods.
+- Static factory `create(...)` — validates invariants, generates a new `*Id`.
+- Static factory `reconstitute(...)` — rebuilds from persisted state without re-validating. Used exclusively by JPA adapters when mapping rows back to domain objects.
+- Getters are record-style (`id()`, `name()`), not JavaBean `getX()`.
+- IDs are typed value objects (`EngineId`, `MakeId`, …), not raw UUIDs/longs.
+- PowerUnit-family IDs (`EngineId`, `ElectricMotorId`, `FuelCellStackId`) are Long-based (BIGSERIAL); all other aggregate IDs are UUID-based.
+
+**Repository interfaces live in `domain/<aggregate>/`**; their implementations live in `infrastructure/persistence/<aggregate>/*RepositoryAdapter.java` and translate between the domain aggregate and a `*JpaEntity`. Never leak JPA entities out of the infrastructure layer.
+
+## Architecture decisions
+
+### DDD + Ports & Adapters
+- Domain layer has zero Spring/JPA dependencies — enforced, never break this
+- Services are plain Java classes wired via @Bean in ApplicationConfig (Composition Root)
+- No @Service on domain/application classes
+- Repository interfaces live in domain, implementations in infrastructure
+
+### Reconstitute pattern
+Every aggregate has two factory methods:
+- `create(...)` — validates and generates ID, used for new entities
+- `reconstitute(...)` — no validation, used by repository adapters to restore from DB
+
+### ImageSource layer tradeoff
+`ImageSourceService` lives in `application.image` but directly uses `api` DTOs (`ImageSourceRequest`, `ImageSourceResponse`) and `infrastructure` JPA repository. This is intentional — ImageSource is infrastructure metadata with no domain logic, so a separate domain representation would be pure ceremony. The key invariant is `api → application`, not `api → infrastructure`.
+
+### Naming
+- `CarModel` not `Model` — avoids conflict with JPA/java.lang
+- `MakeId`, `ModelId`, `GenerationId` etc — typed IDs as records, never raw UUID in domain
+
+## Domain model decisions
+
+### Body → Variant (replacing Trim)
+Decided to model as two levels instead of flat Trim:
+- `Body` — belongs to Generation, holds body style + dimensions (length, width, height,
+  wheelbase, trunk volume). Dimensions are same for all variants of this body.
+- `Variant` — belongs to Body, holds technical config (powertrain, transmission,
+  drivetrain, ground clearance, curb weight, markets)
+- Reasoning: old models with no variants → one Body + one Variant, no model violence
+- Trim level names (Sport, Luxury) — explicitly NOT modelled, too market-specific
+
+### Generation (simplified)
+After Body/Variant introduction, Generation holds ONLY:
+- name (e.g. "E210", "Mk7")
+- yearFrom, yearTo
+- modelId
+  All technical specs moved to Variant. Tables dropped:
+- generation_engines, generation_transmissions,
+  generation_body_styles, generation_drivetrains
+
+### PowerUnit composition model
+Power sources are modelled as a three-type hierarchy sharing a single `power_unit` identity table:
+
+| Concrete type    | Domain class    | DB table        | ID type       |
+|-----------------|-----------------|-----------------|---------------|
+| ICE engine       | `Engine`        | `engines`       | `EngineId(Long)` |
+| Electric motor   | `ElectricMotor` | `electric_motor`| `ElectricMotorId(Long)` |
+| Fuel cell stack  | `FuelCellStack` | `fuel_cell_stack`| `FuelCellStackId(Long)` |
+
+- `power_unit` holds a BIGSERIAL PK and a `unit_type` discriminator.
+- Concrete tables share that PK via a FK `REFERENCES power_unit(id) ON DELETE CASCADE`.
+- JPA uses `@MapsId` + `@OneToOne(cascade=ALL)` on the `PowerUnitJpaEntity` field; concrete entities have no `@GeneratedValue`.
+- IDs are Long-based (BIGSERIAL), not UUID.
+- `PowerUnitJpaEntity` and `PowerUnitJpaRepository` are **public** — required by multiple infrastructure persistence sub-packages.
+
+### Powertrain (bridges Variant ↔ PowerUnit)
+- Named configuration grouping one or more PowerUnits with combined output figures
+- `DrivetrainType` enum: ICE, MHEV, HEV, PHEV, BEV, FCEV (replaces old `PowertrainType`)
+- Holds `combinedPowerHp`, `combinedTorqueNm`, `batteryCapacityKwh`, `electricRangeKm`
+- `battery_capacity_kwh` and `electric_range_km` are nullable but must be set together (CHECK constraint + domain validation)
+- Each unit entry has a `UnitRole` (PRIMARY, SECONDARY, GENERATOR) — replaces old `EngineRole`
+- `powertrain_unit` join table: composite PK `(powertrain_id UUID, power_unit_id BIGINT)`
+- Invariant: exactly one PRIMARY unit required per powertrain
+- Variant references a single Powertrain
+- Example: a PHEV Variant links to a Powertrain with ICE PRIMARY + ElectricMotor SECONDARY
+
+### Engine (shared reference aggregate)
+- Shared across generations, models, makes
+- Has official manufacturer code (e.g. "2GR-FE", "N57")
+- Linked to Variants indirectly via Powertrain, not directly
+
+### Transmission (shared reference / lookup table)
+- Unique on (type, gear_count) — it's a lookup, not a unique physical object
+- No manufacturer code — unlike Engine
+
+### Markets
+- Stored as Set<String> of ISO 3166-1 alpha-2 codes on Variant
+- e.g. ["UA", "EU", "US", "JP"]
+- No separate Market entity — YAGNI
+
+### Uniqueness invariants (enforced at service + DB level)
+- Make: unique name
+- CarModel: unique (make_id, name) and unique (make_id, slug)
+- Generation: unique (model_id, name)
+- Engine: unique code
+- Transmission: unique (type, gear_count)
+- Powertrain: unique name
+- Body: unique (generation_id, body_style)
+- Variant: unique (body_id, powertrain_id, transmission_id, drivetrain)
+
+## Database migrations
+
+Flyway migrations in `server/src/main/resources/db/migration/` are append-only and versioned `V{n}__description.sql`. When changing a schema, add a new `V{n}` — do not edit existing migrations. The current baseline is a single `V1__initial_schema.sql` that contains the full consolidated schema (PowerUnit composition model included). The next migration to add is `V2__...`.
+
+## Testing layout
+
+Tests under `server/src/test/java/live/yurii/autocatalog/` mirror the main-source structure:
+- `domain/` — pure unit tests, no Spring context.
+- `api/` — controller slice tests (`@WebMvcTest`).
+- `infrastructure/` — JPA adapter tests (`@DataJpaTest`) against Testcontainers Postgres.
+- `e2e/` — full Spring Boot tests with Testcontainers Postgres (`TestcontainersConfiguration.java`, `TestAutocatalogApplication.java`).
+
+Always run `cd server && ./mvnw test` after changes.
+
+## Rules
+
+- **Domain layer must never import Spring or JPA.** If you find yourself adding `org.springframework.*` or `jakarta.persistence.*` to `domain/`, you're in the wrong layer.
+- **No Lombok in this project** — despite global preferences. Use plain Java + records for DTOs.
+- **DTOs are records** in `api/*/` (see `EngineRequest`, `EngineResponse`).
+- **Conventional commits**: `feat:`, `fix:`, `chore:`, `refactor:`, `test:`, `docs:`.
+- **Always ask before creating commits.**
